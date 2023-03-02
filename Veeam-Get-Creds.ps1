@@ -12,7 +12,7 @@ Add-Type -assembly System.Security
 
 #Searching for connection parameters in the registry
 try {
-	$VeaamRegPath = "HKLM:\SOFTWARE\Veeam\Veeam Backup and Replication\"
+	$VeaamRegPath = "HKLM:\SOFTWARE\Veeam\Veeam Backup and Replication\DatabaseConfigurations\MsSql\"
 	$SqlDatabaseName = (Get-ItemProperty -Path $VeaamRegPath -ErrorAction Stop).SqlDatabaseName 
 	$SqlInstanceName = (Get-ItemProperty -Path $VeaamRegPath -ErrorAction Stop).SqlInstanceName
 	$SqlServerName = (Get-ItemProperty -Path $VeaamRegPath -ErrorAction Stop).SqlServerName
